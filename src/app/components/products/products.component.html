@@ -1,0 +1,47 @@
+<div>
+<h1>Rick And Morty!</h1>
+<table class = "table table-hover">
+    <thead class="table-danger">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">status</th>
+            <th scope="col">species</th>
+            <th scope="col">type</th>
+            <th scope="col">gender</th>
+            <th scope="col">origin</th>
+            <th scope="col">location</th>
+            <th scope="col">image</th>
+            <th scope="col">episode</th>
+            <th scope="col">url</th>
+            <th scope="col">created</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of productsList; track $index) {
+        <tr>
+            <th class="row">{{item.id}}</th>
+            <td>
+                <span class="badge bg-success">
+                    {{item.name}}
+                </span>
+            </td>
+            <td>{{item.status}}</td>
+            <td>{{item.species}}</td>
+            <td>{{item.type}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.origin}}</td>
+            <td>{{item.location}}</td>
+            <td>
+                <img width="50" height="50" src="{{item.image}}" alt="Rick">
+            </td>
+            <td>{{item.episode}}</td>
+            <td>{{item.url}}</td>
+            <td>{{item.created}}</td>
+        </tr>
+        }
+        
+    </tbody>
+</table>
+</div>
